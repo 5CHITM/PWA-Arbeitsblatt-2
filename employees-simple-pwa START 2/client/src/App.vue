@@ -39,8 +39,17 @@ export default {
         console.error(error);
       }
     },
-    delEmployee() {
+    async delEmployee(e) {
       console.log('delEmployee called');
+      try {
+        await axios({
+          url: `${process.env.VUE_APP_SERVER}/employees/${e.id}`,
+          method: 'delete',
+        });
+        this.fetchData();
+      } catch (error) {
+        console.error(error);
+      }
     },
     updateAvailable() {
       alert('updateAvailable called');
