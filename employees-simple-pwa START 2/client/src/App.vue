@@ -52,7 +52,7 @@ export default {
       }
     },
     updateAvailable() {
-      alert('updateAvailable called');
+      alert('Update vorhanden, bitte App neu starten!');
     },
   },
 };
